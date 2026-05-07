@@ -10,286 +10,316 @@
 <body>
   <header class="page">
     <div class="navbar">
-      <a href="index.html" class="logo" aria-label="Road Injury Insights homepage">
+      <a href="#/" class="logo" aria-label="Road Injury Insights homepage">
         <span class="logo-mark">RI</span>
         <span>Road Injury Insights</span>
       </a>
 
-      <button class="menu-toggle" aria-label="Open navigation menu">
+      <button class="menu-toggle" aria-label="Open navigation menu" type="button">
         ☰
       </button>
 
       <nav class="nav-menu" aria-label="Main navigation">
         <ul>
-          <li><a href="#overview">Overview</a></li>
-          <li><a href="#topics">Topics</a></li>
-          <li><a href="#about">About Data</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a class="nav-button" href="#topics">Explore Topics</a></li>
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/national">National</a></li>
+          <li><a href="#/road-users">Road Users</a></li>
+          <li><a href="#/age-patterns">Age</a></li>
+          <li><a href="#/states">States</a></li>
+          <li><a href="#/equity" class="nav-button">Equity</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero page" id="overview">
-      <div class="hero-copy">
-        <p class="eyebrow">Australian road crash hospitalisation data • 2011–2021</p>
+    <section class="route-view active" data-route="home">
+      <section class="hero page" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Australian road crash hospitalisation data • 2011-2021</p>
 
-        <h1>
-          Turning <span>road injury data</span> into clear visual stories.
-        </h1>
+          <h1>
+            Turning <span>road injury data</span> into clear visual stories.
+          </h1>
 
-        <p>
-          This dashboard explores hospitalised road crash injuries across Australia through
-          national trends, road user groups, age patterns, state comparisons, First Nations
-          outcomes, and remoteness equity.
-        </p>
+          <p>
+            This dashboard explores hospitalised road crash injuries across Australia through
+            national trends, road user groups, age patterns, state comparisons, First Nations
+            outcomes, and remoteness equity.
+          </p>
 
-        <div class="hero-actions">
-          <a href="#topics" class="btn btn-primary">Explore the Topics</a>
-          <a href="#about" class="btn btn-secondary">Read the Data Plan</a>
-        </div>
-      </div>
-
-      <div class="hero-visual" aria-label="Dashboard preview illustration">
-        <div class="floating-card card-one">
-          <span class="dot"></span>
-          <span class="line long"></span>
-          <span class="line short"></span>
-        </div>
-
-        <div class="dashboard-mockup">
-          <div class="mockup-header">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="mockup-chart">
-            <div style="height: 38%"></div>
-            <div style="height: 58%"></div>
-            <div style="height: 48%"></div>
-            <div style="height: 78%"></div>
-            <div style="height: 68%"></div>
-            <div style="height: 88%"></div>
+          <div class="hero-actions">
+            <a href="#/national" class="btn btn-primary">Explore the Dashboard</a>
+            <a href="#/process" class="btn btn-secondary">Read the Data Plan</a>
           </div>
         </div>
 
-        <div class="floating-card card-two">
-          <strong>6</strong>
-          <span>visual topics</span>
+        <div class="hero-visual" aria-label="Dashboard preview illustration">
+          <div class="floating-card card-one">
+            <span class="dot"></span>
+            <span class="line long"></span>
+            <span class="line short"></span>
+          </div>
+
+          <div class="dashboard-mockup">
+            <div class="mockup-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="mockup-chart">
+              <div style="height: 38%"></div>
+              <div style="height: 58%"></div>
+              <div style="height: 48%"></div>
+              <div style="height: 78%"></div>
+              <div style="height: 68%"></div>
+              <div style="height: 88%"></div>
+            </div>
+          </div>
+
+          <div class="floating-card card-two">
+            <strong>6</strong>
+            <span>visual topics</span>
+          </div>
         </div>
+      </section>
+
+      <section class="page topics-section" id="topics">
+        <div class="section-heading">
+          <h2>Dashboard Topics</h2>
+          <p>
+            Each topic opens as a routed dashboard page and reads the processed CSV output
+            directly with D3.
+          </p>
+        </div>
+
+        <div class="topic-grid">
+          <article class="topic-card light-card">
+            <div>
+              <h3><span>National</span><span>Overview</span></h3>
+              <p>Annual hospitalisations, bed days, and average bed days per case.</p>
+            </div>
+
+            <a href="#/national" class="learn-more">
+              <span class="arrow">↗</span>
+              Open page
+            </a>
+          </article>
+
+          <article class="topic-card dark-card">
+            <div>
+              <h3><span>Road User</span><span>Analysis</span></h3>
+              <p>Compare road user groups including car drivers, motorcyclists, and pedal cyclists.</p>
+            </div>
+
+            <a href="#/road-users" class="learn-more">
+              <span class="arrow">↗</span>
+              Open page
+            </a>
+          </article>
+
+          <article class="topic-card green-card">
+            <div>
+              <h3><span>Age</span><span>Pattern</span></h3>
+              <p>Explore how hospitalised injuries differ across age groups over time.</p>
+            </div>
+
+            <a href="#/age-patterns" class="learn-more">
+              <span class="arrow">↗</span>
+              Open page
+            </a>
+          </article>
+
+          <article class="topic-card green-card">
+            <div>
+              <h3><span>State</span><span>Comparison</span></h3>
+              <p>Compare percentage change across Australian states and territories.</p>
+            </div>
+
+            <a href="#/states" class="learn-more">
+              <span class="arrow">↗</span>
+              Open page
+            </a>
+          </article>
+
+          <article class="topic-card light-card">
+            <div>
+              <h3><span>First Nations</span><span>Comparison</span></h3>
+              <p>Compare indexed growth for First Nations and Non-Indigenous Australians.</p>
+            </div>
+
+            <a href="#/first-nations" class="learn-more">
+              <span class="arrow">↗</span>
+              Open page
+            </a>
+          </article>
+
+          <article class="topic-card dark-card">
+            <div>
+              <h3><span>Remoteness</span><span>Equity</span></h3>
+              <p>Compare Major Cities, Regional areas, and Remote areas between population groups.</p>
+            </div>
+
+            <a href="#/equity" class="learn-more">
+              <span class="arrow">↗</span>
+              Open page
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="page about-section" id="about">
+        <div class="about-card">
+          <h2>About this dashboard</h2>
+          <p>
+            The final website uses national, state and territory, and First Nations hospitalised
+            injury datasets to answer key questions through D3 visualisation. Processed KNIME CSV
+            outputs are loaded in-browser so each page remains data driven.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section class="route-view" data-route="dashboard" aria-live="polite">
+      <div class="page dashboard-shell">
+        <div class="dashboard-topbar">
+          <a href="#/" class="back-link">← Home</a>
+          <div class="dashboard-tabs" aria-label="Dashboard sections">
+            <a href="#/national" data-tab="national">National</a>
+            <a href="#/road-users" data-tab="road-users">Road Users</a>
+            <a href="#/age-patterns" data-tab="age-patterns">Age</a>
+            <a href="#/states" data-tab="states">States</a>
+            <a href="#/first-nations" data-tab="first-nations">First Nations</a>
+            <a href="#/equity" data-tab="equity">Equity</a>
+          </div>
+        </div>
+
+        <section class="dashboard-hero">
+          <p class="eyebrow" id="route-eyebrow">Dashboard section</p>
+          <h1 id="route-title">Loading dashboard</h1>
+          <p id="route-description"></p>
+        </section>
+
+        <section id="kpi-row" class="kpi-row" aria-label="Key metrics"></section>
+
+        <section class="visual-panel">
+          <div class="chart-heading">
+            <div>
+              <h2 id="chart-title">Chart</h2>
+              <p id="chart-note"></p>
+            </div>
+            <div id="chart-controls" class="chart-controls"></div>
+          </div>
+
+          <div id="chart" class="chart-stage" role="img"></div>
+        </section>
+
+        <section id="insights" class="insight-grid" aria-label="Data insights"></section>
       </div>
     </section>
 
-    <!-- Topic Cards Section -->
-    <section class="page topics-section" id="topics">
-      <div class="section-heading">
-        <h2>Dashboard Topics</h2>
-        <p>
-          Each section will later connect to its own visualisation page or dashboard component.
-          For now, these cards act as the homepage pathway.
-        </p>
-      </div>
+    <section class="route-view" data-route="process">
+      <section class="page process-section">
+        <div class="dashboard-topbar">
+          <a href="#/" class="back-link">← Home</a>
+        </div>
 
-      <div class="topic-grid">
-        <article class="topic-card light-card">
-          <div>
-            <h3><span></span><span>National Overview</span></h3>
-            <p>Annual hospitalisations, bed days, and average bed days per case.</p>
-          </div>
+        <div class="section-heading process-heading">
+          <h2>Our Working Process</h2>
+          <p>
+            Comments, steps, and tasks completed during the development of this data visualisation project.
+          </p>
+        </div>
 
-          <a href="#" class="learn-more">
-            <span class="arrow">↗</span>
-            Learn more
-          </a>
-        </article>
+        <div class="accordion">
+          <article class="process-item active">
+            <button class="process-question" type="button" aria-expanded="true">
+              <span class="step-number">01</span>
+              <span class="step-title">Review source datasets</span>
+              <span class="toggle-icon">−</span>
+            </button>
 
-        <article class="topic-card dark-card">
-          <div>
-            <h3><span></span><span>Road User Analysis</span></h3>
-            <p>Compare road user groups including car drivers, motorcyclists, and pedal cyclists.</p>
-          </div>
+            <div class="process-answer">
+              <p>
+                Review national, state and territory, and First Nations hospitalisation injury datasets.
+                Identify the main fields: hospitalisations, bed days, road user groups, age groups,
+                sex, remoteness areas, and injury categories.
+              </p>
+            </div>
+          </article>
 
-          <a href="#" class="learn-more">
-            <span class="arrow">↗</span>
-            Learn more
-          </a>
-        </article>
+          <article class="process-item">
+            <button class="process-question" type="button" aria-expanded="false">
+              <span class="step-number">02</span>
+              <span class="step-title">Produce topic datasets</span>
+              <span class="toggle-icon">+</span>
+            </button>
 
-        <article class="topic-card green-card">
-          <div>
-            <h3><span></span><span>Age Pattern</span></h3>
-            <p>Explore how hospitalised injuries differ across age groups over time.</p>
-          </div>
+            <div class="process-answer">
+              <p>
+                Transform raw records into smaller KNIME outputs for national trends, road user
+                groups, age groups, state comparisons, First Nations comparison, and remoteness.
+              </p>
+            </div>
+          </article>
 
-          <a href="#" class="learn-more">
-            <span class="arrow">↗</span>
-            Learn more
-          </a>
-        </article>
+          <article class="process-item">
+            <button class="process-question" type="button" aria-expanded="false">
+              <span class="step-number">03</span>
+              <span class="step-title">Match visual form to question</span>
+              <span class="toggle-icon">+</span>
+            </button>
 
-        <article class="topic-card green-card">
-          <div>
-            <h3><span></span><span>State Comparison</span></h3>
-            <p>Compare percentage change across Australian states and territories.</p>
-          </div>
+            <div class="process-answer">
+              <p>
+                Use line charts for trends, horizontal bars for rankings, a heatmap for age patterns,
+                grouped bars for remoteness comparison, and indexed lines for population disparity.
+              </p>
+            </div>
+          </article>
 
-          <a href="#" class="learn-more">
-            <span class="arrow">↗</span>
-            Learn more
-          </a>
-        </article>
+          <article class="process-item">
+            <button class="process-question" type="button" aria-expanded="false">
+              <span class="step-number">04</span>
+              <span class="step-title">Build the routed interface</span>
+              <span class="toggle-icon">+</span>
+            </button>
 
-        <article class="topic-card light-card">
-          <div>
-            <h3><span></span><span>First Nations Comparison</span></h3>
-            <p>Compare indexed growth for First Nations and Non-Indigenous Australians.</p>
-          </div>
+            <div class="process-answer">
+              <p>
+                Convert the homepage prototype into routed dashboard pages so each topic has a focused
+                visualisation, supporting KPIs, and short evidence-based insight cards.
+              </p>
+            </div>
+          </article>
 
-          <a href="#" class="learn-more">
-            <span class="arrow">↗</span>
-            Learn more
-          </a>
-        </article>
+          <article class="process-item">
+            <button class="process-question" type="button" aria-expanded="false">
+              <span class="step-number">05</span>
+              <span class="step-title">Load and render with D3</span>
+              <span class="toggle-icon">+</span>
+            </button>
 
-        <article class="topic-card dark-card">
-          <div>
-            <h3><span></span><span>Remoteness Equity</span></h3>
-            <p>Compare Major Cities, Regional areas, and Remote areas between population groups.</p>
-          </div>
-
-          <a href="#" class="learn-more">
-            <span class="arrow">↗</span>
-            Learn more
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="page about-section" id="about">
-      <div class="about-card">
-        <h2>About this dashboard</h2>
-        <p>
-          The final website will use national, state and territory, and First Nations hospitalised
-          injury datasets to answer key questions through visualisation. This homepage provides
-          the structure first, so charts can be added later once the processed datasets are ready.
-        </p>
-      </div>
-    </section>
-
-    <!-- Working Process Section -->
-    <section class="page process-section" id="process">
-      <div class="section-heading process-heading">
-        <h2>Our Working Process</h2>
-        <p>
-          Comments, steps, and tasks completed during the development of this data visualisation project.
-        </p>
-      </div>
-
-      <div class="accordion">
-        <article class="process-item active">
-          <button class="process-question" type="button" aria-expanded="true">
-            <span class="step-number">01</span>
-            <span class="step-title">Step 1</span>
-            <span class="toggle-icon">−</span>
-          </button>
-
-          <div class="process-answer">
-            <p>
-              Review the national, state and territory, and First Nations hospitalisation injury datasets.
-              Identify the main fields, including hospitalisations, bed days, road user groups, age groups,
-              sex, remoteness areas, and injury categories.
-            </p>
-          </div>
-        </article>
-
-        <article class="process-item">
-          <button class="process-question" type="button" aria-expanded="false">
-            <span class="step-number">02</span>
-            <span class="step-title">Step 2</span>
-            <span class="toggle-icon">+</span>
-          </button>
-
-          <div class="process-answer">
-            <p>
-              Transform the raw data into smaller datasets for each dashboard section, including national
-              trends, road user groups, age groups, state comparisons, First Nations comparison, and remoteness.
-            </p>
-          </div>
-        </article>
-
-        <article class="process-item">
-          <button class="process-question" type="button" aria-expanded="false">
-            <span class="step-number">03</span>
-            <span class="step-title">Step 3</span>
-            <span class="toggle-icon">+</span>
-          </button>
-
-          <div class="process-answer">
-            <p>
-              Plan which chart type best answers each question, such as line charts for trends,
-              horizontal bar charts for ranking, heatmaps for age patterns, and grouped bars for comparison.
-            </p>
-          </div>
-        </article>
-
-        <article class="process-item">
-          <button class="process-question" type="button" aria-expanded="false">
-            <span class="step-number">04</span>
-            <span class="step-title">Step 4</span>
-            <span class="toggle-icon">+</span>
-          </button>
-
-          <div class="process-answer">
-            <p>
-              Create the homepage layout, hero section, topic cards, and navigation so users can understand
-              the purpose of the dashboard before interacting with the final charts.
-            </p>
-          </div>
-        </article>
-
-        <article class="process-item">
-          <button class="process-question" type="button" aria-expanded="false">
-            <span class="step-number">05</span>
-            <span class="step-title">Step 5</span>
-            <span class="toggle-icon">+</span>
-          </button>
-
-          <div class="process-answer">
-            <p>
-              Replace placeholder sections with final charts using tools such as D3, Chart.js, Plotly,
-              or SVG-based visualisations depending on the project requirements.
-            </p>
-          </div>
-        </article>
-
-        <article class="process-item">
-          <button class="process-question" type="button" aria-expanded="false">
-            <span class="step-number">06</span>
-            <span class="step-title">Step 6</span>
-            <span class="toggle-icon">+</span>
-          </button>
-
-          <div class="process-answer">
-            <p>
-              Drop down placeholderDrop down placeholder.Drop down placeholder.Drop down placeholderDrop down placeholder.
-            </p>
-          </div>
-        </article>
-      </div>
+            <div class="process-answer">
+              <p>
+                Read CSV files with D3, aggregate where needed, draw responsive SVG charts, and keep
+                colours, typography, borders, and spacing aligned with the existing website style.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
     </section>
   </main>
 
   <footer>
     <div class="page">
-      Road Injury Insights Australia — Homepage prototype
+      Road Injury Insights Australia - D3 dashboard prototype
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="script.js"></script>
 </body>
 </html>

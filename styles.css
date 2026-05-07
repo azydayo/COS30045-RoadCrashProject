@@ -120,7 +120,7 @@ header {
 .hero-copy h1 {
   font-size: clamp(2.6rem, 6vw, 5rem);
   line-height: 1.02;
-  letter-spacing: -3px;
+  letter-spacing: 0;
   margin-bottom: 24px;
 }
 
@@ -348,6 +348,7 @@ header {
 .topic-card h3 {
   font-size: clamp(1.8rem, 4vw, 2.7rem);
   line-height: 1.08;
+  letter-spacing: 0;
   margin-bottom: 16px;
 }
 
@@ -430,6 +431,302 @@ header {
 .about-card p {
   color: var(--muted);
   max-width: 900px;
+}
+
+/* Routed dashboard */
+.route-view {
+  display: none;
+}
+
+.route-view.active {
+  display: block;
+}
+
+.dashboard-shell {
+  padding: 28px 0 88px;
+}
+
+.dashboard-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.back-link,
+.dashboard-tabs a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.dashboard-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.dashboard-tabs a {
+  border: 2px solid var(--secondary);
+  border-radius: 999px;
+  background: var(--white);
+  padding: 8px 14px;
+  box-shadow: 2px 2px 0 var(--secondary);
+  font-size: 0.9rem;
+}
+
+.dashboard-tabs a.active {
+  background: var(--primary);
+}
+
+.dashboard-hero {
+  margin-bottom: 26px;
+}
+
+.dashboard-hero h1 {
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  max-width: 900px;
+  margin-bottom: 16px;
+}
+
+.dashboard-hero p:not(.eyebrow) {
+  color: #33343B;
+  max-width: 780px;
+  font-size: 1.06rem;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.kpi-card {
+  background: var(--white);
+  border: 2px solid var(--secondary);
+  border-radius: 24px;
+  box-shadow: 5px 5px 0 var(--secondary);
+  padding: 22px;
+}
+
+.kpi-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.kpi-card strong {
+  display: block;
+  color: var(--secondary);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.kpi-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.visual-panel {
+  background: var(--white);
+  border: 2px solid var(--secondary);
+  border-radius: 30px;
+  box-shadow: 7px 7px 0 var(--secondary);
+  padding: 28px;
+  margin-bottom: 26px;
+}
+
+.chart-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.chart-heading h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.chart-heading p {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.chart-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.control-button {
+  min-height: 38px;
+  border: 2px solid var(--secondary);
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--secondary);
+  padding: 7px 12px;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.control-button.active {
+  background: var(--primary);
+}
+
+.chart-stage {
+  min-height: 430px;
+  overflow-x: auto;
+}
+
+.chart-stage svg {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+}
+
+.axis path,
+.axis line {
+  stroke: var(--secondary);
+  stroke-width: 1.5;
+}
+
+.axis text {
+  fill: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chart-label {
+  fill: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.chart-muted {
+  fill: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 20;
+  background: var(--secondary);
+  color: var(--white);
+  border: 2px solid var(--secondary);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 var(--primary);
+  padding: 10px 12px;
+  max-width: 240px;
+  font-size: 0.88rem;
+  opacity: 0;
+  transform: translate(12px, 12px);
+}
+
+.tooltip strong {
+  display: block;
+  color: var(--primary);
+  margin-bottom: 3px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.legend-swatch {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--secondary);
+  border-radius: 4px;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.insight-card {
+  background: var(--primary);
+  border: 2px solid var(--secondary);
+  border-radius: 24px;
+  box-shadow: 5px 5px 0 var(--secondary);
+  padding: 22px;
+}
+
+.insight-card:nth-child(2) {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.insight-card:nth-child(3) {
+  background: var(--white);
+}
+
+.insight-card h3 {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.insight-card p {
+  color: inherit;
+  opacity: 0.82;
+  font-size: 0.95rem;
+}
+
+.loading-state,
+.error-state {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--secondary);
+  border-radius: 22px;
+  color: var(--muted);
+  font-weight: 800;
+  text-align: center;
+  padding: 30px;
+}
+
+.error-state {
+  color: #8f1d1d;
+  background: #fff4f4;
 }
 
 /* Working Process Accordion */
@@ -545,6 +842,21 @@ footer {
     flex-direction: column;
   }
 
+  .dashboard-topbar,
+  .chart-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-tabs {
+    justify-content: flex-start;
+  }
+
+  .kpi-row,
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+
   .menu-toggle {
     display: block;
   }
@@ -590,7 +902,7 @@ footer {
 
 @media (max-width: 560px) {
   .hero-copy h1 {
-    letter-spacing: -1.5px;
+    letter-spacing: 0;
   }
 
   .topic-card {
@@ -626,5 +938,14 @@ footer {
     width: 42px;
     height: 42px;
     font-size: 1.6rem;
+  }
+
+  .visual-panel {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .chart-stage {
+    min-height: 360px;
   }
 }
